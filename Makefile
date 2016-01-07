@@ -6,13 +6,13 @@
 #    By: jschotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:08:32 by jschotte          #+#    #+#              #
-#    Updated: 2016/01/07 12:53:06 by jschotte         ###   ########.fr        #
+#    Updated: 2016/01/07 15:03:21 by jschotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-SRC = fdf.c
+SRC = fdf.c utils.c
 
 OBJ = $(SRC:.c=.o)
 
