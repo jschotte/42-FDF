@@ -6,20 +6,20 @@
 #    By: jschotte <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/24 10:08:32 by jschotte          #+#    #+#              #
-#    Updated: 2016/01/07 15:03:21 by jschotte         ###   ########.fr        #
+#    Updated: 2016/01/25 14:52:12 by jschotte         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-SRC = fdf.c utils.c
+SRC = fdf.c utils.c parser.c mlx.c hook.c
 
 OBJ = $(SRC:.c=.o)
 
 $(NAME):
 	make -C libft/ fclean && make -C libft/
-	gcc -c $(SRC)
-	gcc -o $(NAME) $(OBJ) -L/usr/local/lib/ -I/usr/local/include -lmlx -framework OpenGL -framework AppKit 
+	gcc -Werror -Wextra -Wall -c $(SRC)
+	gcc -o $(NAME) $(OBJ) -lm -L libft/ -lft -lmlx -framework OpenGL -framework AppKit	
 
 all: $(NAME)
 
